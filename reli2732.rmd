@@ -209,6 +209,15 @@ output:
 ### Iron Crutch Li
 - **Li Tieguai**
 - one of the **eight immortals** of **Taoist pantheon**
+  - able to leave his body and commune with deities
+  - while he was gone his body was **like a dead person**
+  - always back within 7 days
+- had an assistant
+  - tasked with watching over his body
+  - one day heard his mother was dying
+  - decided to burn Li's body after 6 days instead of 7
+    - but Li was not dead
+    - when he came back he took the body of a beggar with an iron crutch
 
 ## J 
 
@@ -220,9 +229,15 @@ output:
 
 ### Memento Mori
 - "reminder of mortality"
+- "remembrance of death"
 - medieval Latin Christian
 - **reflection on mortality**
   - consider **vanity of earthly life**
+- the idea of being conscious of death
+  - reflect on
+    - lives
+    - morality
+    - place in the world
 
 ## N 
 
@@ -248,6 +263,9 @@ output:
 
 ### Taphophobia
 - **fear** of being **buried alive**
+- before medical advances, death was not always clear
+  - safety coffins to address this
+  - designs to allow the buried person to signal they are alive
 
 ### Thanatology
 - **study** of **death**
@@ -263,3 +281,38 @@ output:
 ## Y 
 
 ## Z 
+
+# Introduction
+
+## Buddhist Parable of the Mustard Seed
+
+## Wari Mortuary Cannibalism
+
+## Religious Ritual (Characteristics)
+
+## Van Gennep's Rite of Passage
+
+## Various Definitions of "Death"
+
+### Traditional
+- cessation of breath?
+
+### Chinese Culture
+- Iron Crutch Li
+- the dead were left out and venerated for a period of time
+  - perhaps like Iron Crutch Li they were just visiting the gods
+
+### Harvard
+- a person can be declared dead IF
+  - **brain function** is **irreversibly lost**
+  - even though heart/lung activity is present due to **mechanical support**
+- **brain death**
+
+### Veatch's Four Possibilities
+1. irreversible loss of the **flow of vital fluids**
+1. irreversible **loss of soul**
+1. irreversible **loss of brain function**
+   - including self-regulation (involuntary function)
+1. **loss of capacity for social function** due to **loss of higher brain function**
+
+## Issues with Comparative Study of Religion
