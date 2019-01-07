@@ -174,9 +174,29 @@ output:
 
 ## C 
 
+### Cosmology
+- branch of astronomy
+- study of the **origins of life** and **the universe**
+  - large scale properties of the universe as a whole
+
 ## D 
 
+### Discourse Community
+- group of people who **share** a common discourse
+  - i.e., a **set of basic values and assumptions**
+
 ## E 
+
+### Epoch&eacute;
+- suspension of judgement
+- withholding of assent
+- all **judgements** on **non-evident** matters are **suspended**
+  - induces ataraxia
+    - freedom from worry
+- role in **phenomenology**
+  - block biases and assumptions
+  - explain a phenomenon in terms of an inherent system of meaning
+  - this predisposition **must be assumed** before phenomenological study
 
 ## F 
 
@@ -210,11 +230,19 @@ output:
 
 ## P 
 
+### Phenomenology
+- consider **phenomena** as **distinct from being**
+- focus on **consciousness** and **objects of direct experience**
+- see definition of **Epoch&eacute;**
+
 ## Q 
 
 ## R 
 
 ## S 
+
+### Soteriology
+- study of **religious doctrines** of **salvation**
 
 ## T 
 
