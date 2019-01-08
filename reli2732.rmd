@@ -2,7 +2,7 @@
 author: |
   | William Findlay
 title: |
-  | RELI2732 Notes
+  | RELI2732 Notes Pre-Midterm
 date: \today
 bibliography: /home/housedhorse/.bibs/uni.bib
 csl: /home/housedhorse/.bibs/ieee.csl
@@ -371,7 +371,7 @@ output:
   - at a funeral, the youngest descendent acts as the deceased for a day
     - they get to experience reverence for the day
 
-### The Rite of Passage
+### Van Gennep's Rite of Passage
 - involve a **change of social status**
   - e.g., Bar Mitzvah
 - three stages
@@ -386,7 +386,6 @@ output:
      - often with special signs of having completed ritual
        - e.g., wedding rings
 
-## Van Gennep's Rite of Passage
 
 ## Various Definitions of "Death"
 
@@ -426,3 +425,13 @@ output:
 ### Essentialism
 - the assumption that there is **one original religion** from which **all others branch**
 - **no evidence for this whatsoever**
+
+# Primal Perspectives
+
+# Death in the Ancient World
+
+# Jewish Perspectives
+
+# Christian Perspectives
+
+# Muslim Perspectives
