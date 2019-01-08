@@ -175,15 +175,19 @@ output:
 ## C 
 
 ### Cosmology
-- branch of astronomy
 - study of the **origins of life** and **the universe**
   - large scale properties of the universe as a whole
+- what is the **religious culture's** view of the **universe**?
 
 ## D 
 
 ### Discourse Community
-- group of people who **share** a common discourse
+- group of people who **share** a common discourse (**common rhetorical goals**)
   - i.e., a **set of basic values and assumptions**
+  - think Dungeons and Dragons players
+- in the past discourse communities were a lot harder to form
+  - limitations of media
+  - if a story was **important enough** to share **it was a big deal**
 
 ## E 
 
@@ -191,12 +195,12 @@ output:
 - suspension of judgement
 - withholding of assent
 - all **judgements** on **non-evident** matters are **suspended**
-  - induces ataraxia
-    - freedom from worry
 - role in **phenomenology**
   - block biases and assumptions
   - explain a phenomenon in terms of an inherent system of meaning
   - this predisposition **must be assumed** before phenomenological study
+- don't worry about the **truth of stories**
+  - worry about what they mean to people
 
 ## F 
 
@@ -243,12 +247,26 @@ output:
 
 ## O 
 
+### Ontology
+- study of **existence**
+- what does it mean to exist?
+  - **monistic**
+    - one fundamental principle
+    - e.g., scientism
+  - **dualistic**
+    - two fundamental principles
+    - spirit and matter 
+
 ## P 
 
 ### Phenomenology
 - consider **phenomena** as **distinct from being**
 - focus on **consciousness** and **objects of direct experience**
 - see definition of **Epoch&eacute;**
+  - actively not deciding the truth of a claim
+- in the context of religious studies
+  - look at the **lived experience** of religious people
+  - do not approach from an internal faith-based perspective
 
 ## Q 
 
@@ -258,6 +276,10 @@ output:
 
 ### Soteriology
 - study of **religious doctrines** of **salvation**
+- *soterios* = salvation in Latin
+- Christianity
+  - Christ is the savior
+- some religions **don't have a soteriology**
 
 ## T 
 
@@ -269,6 +291,10 @@ output:
 
 ### Thanatology
 - **study** of **death**
+
+### Theology
+- how are gods understood?
+- study of a **religion from within**
 
 ## U 
 
@@ -285,17 +311,87 @@ output:
 # Introduction
 
 ## Buddhist Parable of the Mustard Seed
+- begins with a commentary on **reincarnation**
+  - "flowing-on for a hundred thousand ages"
+  - "evolved in this Buddha-era among gods and men"
+  - **cosmological claim**
+- Gotami-tissa
+  - poor family
+  - "skinny Gotami"
+- Gotami has a son
+  - people respect her now
+  - **son dies**
+    - this **drives her crazy**
+    - "sorrow-to-the-point-of-madness"
+    - she still feels attached to the body
+- she desperately carries the body around
+  - begs for medicine for her dead son
+  - people revile her but she does not understand
+- finally, a wise man tells her to **ask the Buddha for "medicine"**
+ 
+### What Sort of Medicine is the Man Talking About?
+- **advice/teaching** rather than physical medicine
+- in fact, the Buddha tells her:
+  - go to a house where they have not experienced death
+  - ask them for a mustard seed
+- Gotami searches for a family who has not experienced death
+  - she cannot find one
+  - so what use are their mustard seeds?
+- finally she realizes the **futility of her madness**
+  - death is a fact of life
 
 ## Wari Mortuary Cannibalism
 
 ## Religious Ritual (Characteristics)
+- rituals
+  - **invariant**
+  - tied into **understanding** of an overall act
+- religious rituals
+  - **embedded in cultural systems**
+  - performed
+    - real audience
+      - marriage
+      - funeral
+    - imagined audience
+      - prayer
+  - formalistic
+    - **rules-governed**
+  - traditionalistic
+    - **invariant**
+    - not that it **doesn't change**
+    - rather that it **appears not to change**
+- ritualization **posits the existence of** an **authoritative reality**
+  - this reality **dictates the immediate situation**
+
+### Effects of Ritual
+- forms/**reinforces communities**
+- connect actions with **authoritative reality**
+- experiential and performative explanation of social realities
+  - reverence of elders in Chinese religion
+  - at a funeral, the youngest descendent acts as the deceased for a day
+    - they get to experience reverence for the day
+
+### The Rite of Passage
+- involve a **change of social status**
+  - e.g., Bar Mitzvah
+- three stages
+  1. **separation**
+     - taken out of every day situation
+     - separated from typical social circumstances
+  1. **liminality**
+     - between two different states
+     - e.g., both boy and man at once
+     - individuality is limited
+  1. **reintegration**
+     - often with special signs of having completed ritual
+       - e.g., wedding rings
 
 ## Van Gennep's Rite of Passage
 
 ## Various Definitions of "Death"
 
 ### Traditional
-- cessation of breath?
+- cessation of breath
 
 ### Chinese Culture
 - Iron Crutch Li
@@ -316,3 +412,17 @@ output:
 1. **loss of capacity for social function** due to **loss of higher brain function**
 
 ## Issues with Comparative Study of Religion
+- there are *certain* cases for which this might be okay
+  - keep it objective
+  - focus on specific comparison/contrast
+    - how does a given religion handle death?
+
+### E.B. Tyler
+- **primitive cultures**
+  - somewhat pejorative
+  - can one culture be more primitive than another?
+  - inferior to another?
+
+### Essentialism
+- the assumption that there is **one original religion** from which **all others branch**
+- **no evidence for this whatsoever**
