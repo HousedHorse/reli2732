@@ -8,19 +8,22 @@ bibliography: /home/housedhorse/.bibs/uni.bib
 csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes: |
-  ``` {=latex}
+  ```{=latex}
   \usepackage{float}
   \usepackage{listings}
   \usepackage[hang,bf]{caption}
   \usepackage{framed}
   \usepackage[section]{placeins}
+  \usepackage[dvipsnames,table]{xcolor}
+
+  \usepackage{pifont}
 
   \allowdisplaybreaks
 
   % fancy headers/footers
   \makeatletter
   \usepackage{fancyhdr}
-  \lhead{\@author}
+  \lhead{William Findlay et al.}
   \chead{}
   \rhead{\@title}
   \lfoot{}
@@ -37,10 +40,12 @@ header-includes: |
   \usepackage[explicit]{titlesec}
   \usepackage{aliascnt}
 
-  \floatplacement{figure}{!htb}
-  \floatplacement{table}{!htb}
-  \floatplacement{listing}{!htb}
-  \lstset{mathescape=true,numbers=left,breaklines=true,frame=single,language=C,captionpos=b,abovecaptionskip={\abovecaptionskip},belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep}
+  \floatplacement{figure}{!htbp}
+  \floatplacement{table}{!htbp}
+  \floatplacement{listing}{!htbp}
+  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=b,abovecaptionskip={\abovecaptionskip},
+  belowcaptionskip={\belowcaptionskip},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}}}
   \setlength{\captionmargin}{1in}
 
   \newgeometry{margin=1in}
@@ -126,25 +131,59 @@ header-includes: |
   \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
               \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
-  \renewcommand{\labelitemi}{$\bullet$}
-  \renewcommand{\labelitemiii}{\textbullet}
-  \renewcommand{\labelitemiv}
+  \renewcommand{\labelitemi}{\large$\bullet$}
+  \renewcommand{\labelitemii}{\ding{226}}
+  \renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+  \renewcommand{\labelitemiv}{\small$\triangleright$}
 
-  \titleformat{\paragraph}
-  {\itshape}
-  {}
-  {0em}
-  {\underline{#1}}[ ]
-  \titleformat{\subparagraph}
-  {\itshape}
-  {}
-  {0em}
-  {#1}[ ]
+  \titleformat{\paragraph} % command to change
+  [runin]                  % shape  (runin, etc.)
+  {\small\bfseries}              % format (bfseries, itshape, etc.)
+  {}                       % label  (thesection, thesubsection, etc.)
+  {0em}                    % separation between label and body
+  {#1}        % before the body
+  []                       % after the body
+
+  \titleformat{\subparagraph} % command to change
+  [runin]                  % shape  (runin, etc.)
+  {\small\bfseries}              % format (bfseries, itshape, etc.)
+  {}                       % label  (thesection, thesubsection, etc.)
+  {0em}                    % separation between label and body
+  {#1}        % before the body
+  []                       % after the body
 
   \let\lil\lstinputlisting
   \usepackage{afterpage}
-  \usepackage{xcolor}
   \hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+  \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+  \makeatletter
+  \patchcmd{\lst@GLI@}% <command>
+    {\def\lst@firstline{#1\relax}}% <search>
+    {\def\lst@firstline{#1\relax}\def\lst@firstnumber{#1\relax}}% <replace>
+    {\typeout{listings firstnumber=firstline}}% <success>
+    {\typeout{listings firstnumber not set}}% <failure>
+  \makeatother
+
+  \usepackage{chngcntr}
+  \counterwithin{figure}{section}
+  \counterwithin{table}{section}
+
+  \usepackage{booktabs}
+  \usepackage{longtable}
+  \usepackage{array}
+  \usepackage{multirow}
+  \usepackage{wrapfig}
+  \usepackage{float}
+  \usepackage{colortbl}
+  \usepackage{pdflscape}
+  \usepackage{tabu}
+  \usepackage{threeparttable}
+  \usepackage{threeparttablex}
+  \usepackage[normalem]{ulem}
+  \usepackage{makecell}
+  \pagestyle{fancy}
+  \usepackage{lipsum}
   ```
 output:
   pdf_document:
@@ -153,17 +192,29 @@ output:
     fig_caption: true
     keep_tex: false
 ---
+```{r,include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)
+```
+\thispagestyle{empty}
+\counterwithin{lstlisting}{section}
 \newpage
-\pagestyle{plain}
+\pagenumbering{roman}
+\thispagestyle{plain}
 \tableofcontents
 \newpage
-\pagestyle{fancy}
+\thispagestyle{plain}
+\listoffigures
+\listoftables
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
-# Definitions
 
-## A 
+# Introduction
 
-## B 
+## Definitions
 
 ### Brain Death
 - **complete loss** of **all brain function**
@@ -172,14 +223,10 @@ output:
     - this is how it differs from a vegetative state
 - used as a **legal indicator of death** in many jurisdictions
 
-## C 
-
 ### Cosmology
 - study of the **origins of life** and **the universe**
   - large scale properties of the universe as a whole
 - what is the **religious culture's** view of the **universe**?
-
-## D 
 
 ### Discourse Community
 - group of people who **share** a common discourse (**common rhetorical goals**)
@@ -188,8 +235,6 @@ output:
 - in the past discourse communities were a lot harder to form
   - limitations of media
   - if a story was **important enough** to share **it was a big deal**
-
-## E 
 
 ### Epoch&eacute;
 - suspension of judgement
@@ -201,14 +246,6 @@ output:
   - this predisposition **must be assumed** before phenomenological study
 - don't worry about the **truth of stories**
   - worry about what they mean to people
-
-## F 
-
-## G 
-
-## H 
-
-## I 
 
 ### Iron Crutch Li
 - **Li Tieguai**
@@ -223,14 +260,6 @@ output:
     - but Li was not dead
     - when he came back he took the body of a beggar with an iron crutch
 
-## J 
-
-## K 
-
-## L 
-
-## M 
-
 ### Memento Mori
 - "reminder of mortality"
 - "remembrance of death"
@@ -243,10 +272,6 @@ output:
     - morality
     - place in the world
 
-## N 
-
-## O 
-
 ### Ontology
 - study of **existence**
 - what does it mean to exist?
@@ -257,8 +282,6 @@ output:
     - two fundamental principles
     - spirit and matter 
 
-## P 
-
 ### Phenomenology
 - consider **phenomena** as **distinct from being**
 - focus on **consciousness** and **objects of direct experience**
@@ -268,20 +291,12 @@ output:
   - look at the **lived experience** of religious people
   - do not approach from an internal faith-based perspective
 
-## Q 
-
-## R 
-
-## S 
-
 ### Soteriology
 - study of **religious doctrines** of **salvation**
 - *soterios* = salvation in Latin
 - Christianity
   - Christ is the savior
 - some religions **don't have a soteriology**
-
-## T 
 
 ### Taphophobia
 - **fear** of being **buried alive**
@@ -295,20 +310,6 @@ output:
 ### Theology
 - how are gods understood?
 - study of a **religion from within**
-
-## U 
-
-## V 
-
-## W 
-
-## X 
-
-## Y 
-
-## Z 
-
-# Introduction
 
 ## Buddhist Parable of the Mustard Seed
 - begins with a commentary on **reincarnation**
@@ -339,8 +340,6 @@ output:
   - so what use are their mustard seeds?
 - finally she realizes the **futility of her madness**
   - death is a fact of life
-
-## Wari Mortuary Cannibalism
 
 ## Religious Ritual (Characteristics)
 - rituals
@@ -426,7 +425,260 @@ output:
 - the assumption that there is **one original religion** from which **all others branch**
 - **no evidence for this whatsoever**
 
-# Primal Perspectives
+# Indigenous Perspectives
+
+## Definitions
+
+### Animism
+- elements of the natural world are
+  - inhabited/animated by **spiritual beings**
+
+### Psychic Unit of Humanity
+- **all beings** across **all cultures** and **all time periods**
+  - have the **same cognitive ability**
+  - the **difference** is **culture**
+
+### Numinous
+- the **feeling** of **spiritual presence**
+- defined by Rudolph Otto in *Idea of the Holy*
+  - mysterium
+    - mysterious
+  - tremendum
+    - scary
+  - fascinans
+    - fascinating
+    - compelling
+    - you *want* to engage
+
+### Tupilaq
+- totem thrown into sea by Inuit
+  - sends a vengeful spirit to kill enemies
+
+### Shaman
+- **religious professional**
+- **interacts** with the spiritual entities **directly**
+- in many cultures
+  - chosen by the spirits
+  - mediate
+    - healing
+    - spiritual combat (dispel demons of disease)
+  - non-ordinary states of consciousness
+    - dreaming
+    - ritual drumming
+    - fasting
+    - chanting
+    - psychoactive substances
+
+### Near-Death Experience
+- often cited as evidence of cosmological claims
+- Eben Alexander
+  - had a near-death experience
+  - wrote a book about it
+    - "Proof of Heaven"
+- causal explanations
+  - emotional chock
+- physical explanations
+  - metabolic imbalance
+  - drug overdose
+  - lack of oxygen in brain
+
+### Comensal Community
+- **comensal**
+  - sharing foood
+
+## The Role of Affect in Religion
+- **affect**
+  - the way that humans **respond** to **phenomena**
+- Rudolph Otto
+  - the *Idea of the Holy* book
+  - Otto **assumes** there is only **one** relationship between humans and spirit world
+- early Japanese religion (Shinto)
+  - *kami*
+    - classification based on the **emotional impact** it has on people
+  - it is through **stories** that the *kami* come into existence
+    - what is worth telling a story about?
+    - something that **impacts you**
+- local cults develop
+  - their **continued existence** is based on
+    - **perceived efficacy** of the deity present
+    - efficacy can be determined through **stories**
+
+## Common Characteristics of Indigenous Religions (Basilov)
+
+### Basilov Traits
+
+1. **animism**
+   - animation or spiritualization of the surrounding world
+1. **connections** in nature
+   - belief in all-embracing connections in nature
+   - spirit-world is not discrete
+1. **no separation** from surrounding world
+   - depend on the surrounding world for survival
+   - surrounding world **includes spirits**
+1. the **cosmos** is **accessible**
+   - spirit realms can be **accessed**
+     - mostly **shamans**
+     - possibly others
+1. religion as **social consciousness**
+   - creates **meaning** in the **bonds we have with each other**
+
+### Cosmology
+- **visible** world and **invisible** world
+  - human beings possess **one or more souls**
+  - diversity
+    - is our world in **superposition** with the spirit world?
+    - **or** do these spirits live **elsewhere**
+- **animism**
+  - some elements of the natural world are
+    - inhabited by spiritual beings
+    - or animated by spiritual beings
+  - **what elements** of the world are interpreted this way?
+    - Nayaka
+      - object must be **tied to a human community**
+    - early Japanese
+      - *kami*: objects or elements of nature with **superior power**
+      - awe-inspiring
+      - humans can be *kami* (emperors)
+      - Gods are also *kami*
+- **religious practice** and **shamans**
+
+
+## Souls in Indigenous Religions
+
+### Multiplicity
+- ancient China
+  - **hun soul**
+    - breath
+    - animates the body
+    - leaves on death
+  - **po soul**
+    - in the bones
+    - remains in the body at burial
+- Tibet
+  - souls in **various parts** of the body
+  - each soul is an **internal protective deity**
+    - internal souls spread out
+    - they *protect* you from illness
+- Inuit
+  - soul in the **larynx**
+  - another soul on the **left side of the body**
+  - also souls the size of **finger joints** that live in the **limbs**
+  - about the size of a sparrow
+  - help to animate the body
+    - affective experience of **being alive** related to bodily **activities of these souls**
+    - sore back could be because back soul exited body while sleeping
+
+### Mobility
+  - some souls can **leave the body**
+  - not **always** the case that *every* soul can do this
+    - ancient China
+      - hun can leave
+      - po stays
+  - soul loss 
+  - souls earned at specific points in life
+
+### What Happens After Death to Souls
+- **utopian vs locative**
+  - utopian
+    - you go to a **perfect place** discrete from the human world
+    - heaven
+  - locative
+    - a real place
+      - continued connection to this world
+    - boundaries
+    - Gurung people in Nepal
+      - entry to land of ancestors on top of the Oble Dome
+
+### Materiality
+- specific **shapes**
+  - Inuit
+    - souls size of sparrow
+    - shaped like little people
+- susceptible to interventions
+  - ancient China
+    - dead honored at feast
+    - dead eat and drink too
+      - deceased can become drunk!
+  - Inuit
+    - souls can be **attacked** by magic
+    - spirits can be used to attack people
+      - attack their **souls** not their **bodies**
+      - has an **effect** on the body
+  - Soyot of Siberia
+    - dip soul in hot water $\implies$ suffer fever
+    - dip soul in cold water $\implies$ shivers
+    - twist hands and legs of the soul $\implies$ pain in limbs
+  - Hagen people of Papua New Guinea
+    - sickness in the community
+      - call upon the dead to help
+      - say names of all the dead without leaving any out
+    - if they forget a name, the spirit gets angry
+      - send sickness in response
+      - vindictive
+
+## The Melpa Understanding of Souls
+
+### Melpa Story
+- eldest brother refuses to sacrifice sister's pig
+- sister walks home and takes shelter in a sacrificial hut to sleep
+  - dead mother's brother entered
+  - hid her 
+  - she saw spirits of the dead come for a meeting
+    - locative
+    - mobility
+- spirits need to decide who to let die in a battle
+  - nobody wants to give their men up
+  - because their men need to give them sacrifice
+- father decides to let the eldest brother die
+  - because he refused to sacrifice his pig
+- sister goes back to the brothers and warns them
+  - shows them sacrificial meat as proof
+- brothers ignored her advice
+  - eldest brother dies in battle
+- moral of the story:
+  - dead are vengeful
+  - dead hear, see, and know all
+  - must honor them with sacrifices
+
+## Wari Funeral Practice
+
+### Mortuary Cosmology
+- locative
+  - ancestral realm at the bottom of deep water
+  - no hunting
+- ancestors emerge as boars and allow themselves to be hunted
+  - support the living
+  - the dead continue to **provide for the living**
+- the dead are **responsible** for the **sustenance of the living**
+
+### Death and Mourning
+- from the moment of death until funeral's end
+  - everyone screams
+  - emotionally affective experience
+- family
+  - never allow the body to sit alone
+- non-family
+  - all other ritual obligations
+  - prepare food
+  - build pyre
+- ritual piling
+  - lay on the ground and pile on top of each other
+  - until they pass out
+- dismember body
+  - place into cooking pots
+  - inedible portions go to fire
+  - non-family members eat the body
+
+### Affect
+- detachment from the dead
+- the "negative experience of nostalgia"
+- destroy all material evidence of the dead's existence
+  - burn material possessions
+  - name no longer used
+  - mourners change aspects of their lives
+
+
+
 
 # Death in the Ancient World
 
