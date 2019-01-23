@@ -322,6 +322,9 @@ library(kableExtra)
 ```{r child='./readings/week1.rmd'}
 ```
 
+```{r child='./readings/week1-video.rmd'}
+```
+
 
 
 
