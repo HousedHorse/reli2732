@@ -217,6 +217,18 @@ library(kableExtra)
 # Introduction
 
 ## The Buddhist Parable of the Mustard Seed
+- cosmological claim
+  - souls "flow" for a hundred thousand ages
+- Skinny Gotami
+  - has a son so people respect her
+  - son dies
+  - sorrow to the point of madness
+- desperately carries the body around begging for medicine
+  - finally sent to the Buddha
+- the Buddha tells her
+  - find a family unaffected by death and get a mustard seed from them
+  - Gotami eventually realizes everyone is affected by death
+  - she finds enlightenment
 
 ## Characteristics of Religious Ritual
 
@@ -273,6 +285,7 @@ library(kableExtra)
 ```{r child='./readings/week3.rmd'}
 ```
 
+\newpage
 \appendix
 # Definitions
 
@@ -283,11 +296,11 @@ encoding='UTF-8')
 knitr::kable(
   data, caption = '\\label{glossary}A glossary of important definitions.', longtable=TRUE, align=c("r","l")
 ) %>%
-group_rows("Week 1: Introduction",1,10) %>%
-group_rows("Week 2: Indigenous Religions",11,16) %>%
+group_rows("Week 1: Introduction",1,10, indent=FALSE) %>%
+group_rows("Week 2: Indigenous Religions",11,16, indent=FALSE) %>%
 group_rows("Week 3: Death in the Ancient World",17,26) %>%
 kable_styling(latex_options = c('striped'), stripe_color="#e6f0ff") %>%
 column_spec(2,width='32em') %>%
-column_spec(1,width='10em') %>%
+column_spec(1,width='11em') %>%
 row_spec(0,bold=TRUE)
 ```
