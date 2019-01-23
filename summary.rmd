@@ -1,0 +1,284 @@
+
+---
+author: |
+  | William Findlay
+title: |
+  | RELI2732 Summary Notes
+date: \today
+bibliography: /home/housedhorse/.bibs/uni.bib
+csl: /home/housedhorse/.bibs/ieee.csl
+subparagraph: yes
+header-includes: |
+  ```{=latex}
+  \UseRawInputEncoding
+  \usepackage{float}
+  \usepackage{listings}
+  \usepackage[hang,bf]{caption}
+  \usepackage{framed}
+  \usepackage[section]{placeins}
+
+  \usepackage[dvipsnames,table]{xcolor}
+
+  \usepackage{pifont}
+
+  \allowdisplaybreaks
+
+  % fancy headers/footers
+  \makeatletter
+  \usepackage{fancyhdr}
+  \lhead{\@author}
+  \chead{}
+  \rhead{\@title}
+  \lfoot{}
+  \cfoot{\thepage}
+  \rfoot{}
+  \renewcommand{\headrulewidth}{0.4pt}
+
+  \usepackage{amsmath, amsfonts,amssymb, amsthm}
+  \usepackage{siunitx}
+  \usepackage[boxruled,lined,linesnumbered,titlenumbered]{algorithm2e}
+
+  \usepackage{setspace}
+  \usepackage{changepage}
+  \usepackage[explicit]{titlesec}
+  \usepackage{aliascnt}
+
+  \floatplacement{figure}{!htbp}
+  \floatplacement{table}{!htbp}
+  \lstset{numbers=left,breaklines=true,frame=single,language=Python,captionpos=t,abovecaptionskip={\abovecaptionskip},
+  belowcaptionskip={0.5em},aboveskip=\intextsep,showstringspaces=false,identifierstyle=\color{Blue},
+  commentstyle={\color{OliveGreen}},keywordstyle={\bfseries\color{Orange}}}
+  \setlength{\captionmargin}{1in}
+
+  \newgeometry{margin=1in}
+
+  \newtheoremstyle{plain}
+  {12pt}   % ABOVESPACE
+  {12pt}   % BELOWSPACE
+  {\itshape}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries} % HEADFONT
+  {.}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+
+  \newtheoremstyle{definition}
+  {12pt}   % ABOVESPACE
+  {12pt}   % BELOWSPACE
+  {\normalfont}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\bfseries} % HEADFONT
+  {.}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+
+  \newtheoremstyle{remark}
+  {12pt}   % ABOVESPACE
+  {12pt}   % BELOWSPACE
+  {\normalfont}  % BODYFONT
+  {0pt}       % INDENT (empty value is the same as 0pt)
+  {\itshape} % HEADFONT
+  {.}         % HEADPUNCT
+  {5pt plus 1pt minus 1pt} % HEADSPACE
+  {}          % CUSTOM-HEAD-SPEC
+
+  \theoremstyle{plain}
+
+  % define theorem
+  \newtheorem{theorem}{Theorem}[section]
+  \providecommand*{\theoremautorefname}{Theorem}
+
+  % define lemma
+  \newtheorem{lemma}{Lemma}[section]
+  \providecommand*{\lemmaautorefname}{Lemma}
+
+  % define claim
+  \newtheorem{claim}{Claim}[section]
+  \providecommand*{\claimautorefname}{Claim}
+
+  % define corollary
+  \newtheorem{corollary}{Corollary}[section]
+  \providecommand*{\corollaryautorefname}{Corollary}
+
+  % define proposition
+  \newtheorem{proposition}{Proposition}[section]
+  \providecommand*{\propositionautorefname}{Proposition}
+
+  % define conjecture
+  \newtheorem{conjecture}{Conjecture}[section]
+  \providecommand*{\conjectureautorefname}{Conjecture}
+
+  \theoremstyle{remark}
+
+  % define observation
+  \newtheorem{observation}{Observation}[section]
+  \providecommand*{\observationautorefname}{Observation}
+
+  % define remark
+  \newtheorem{remark}{Remark}[section]
+  \providecommand*{\remarkautorefname}{Remark}
+
+  \theoremstyle{definition}
+
+  % define example
+  \newtheorem{example}{Example}[section]
+  \providecommand*{\exampleautorefname}{Example}
+
+  % define definition
+  \newtheorem{definition}{Definition}[section]
+  \providecommand*{\definitionautorefname}{Definition}
+
+  \newcommand{\blackbox}{\hfill$\blacksquare$}
+  \usepackage{tikz}
+  \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+              \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+  \renewcommand{\labelitemi}{\large$\bullet$}
+  \renewcommand{\labelitemii}{\ding{226}}
+  \renewcommand{\labelitemiii}{\tiny$\blacksquare$}
+  \renewcommand{\labelitemiv}{\small$\triangleright$}
+
+  \titleformat{\paragraph} % command to change
+  [runin]                  % shape  (runin, etc.)
+  {\bfseries}              % format (bfseries, itshape, etc.)
+  {}                       % label  (thesection, thesubsection, etc.)
+  {0em}                    % separation between label and body
+  {#1}        % before the body
+  [.]                       % after the body
+
+  \titleformat{\subparagraph} % command to change
+  [runin]                  % shape  (runin, etc.)
+  {\itshape}              % format (bfseries, itshape, etc.)
+  {}                       % label  (thesection, thesubsection, etc.)
+  {0em}                    % separation between label and body
+  {#1}        % before the body
+  [.]                       % after the body
+
+  \let\lil\lstinputlisting
+  \usepackage{afterpage}
+  \hypersetup{colorlinks, allcolors=., urlcolor=blue}
+
+  \usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+  \makeatletter
+  \patchcmd{\lst@GLI@}% <command>
+    {\def\lst@firstline{#1\relax}}% <search>
+    {\def\lst@firstline{#1\relax}\def\lst@firstnumber{#1\relax}}% <replace>
+    {\typeout{listings firstnumber=firstline}}% <success>
+    {\typeout{listings firstnumber not set}}% <failure>
+  \makeatother
+
+  \renewcommand\lstlistlistingname{List of Listings}
+  \usepackage{chngcntr}
+  \counterwithin{figure}{section}
+  \counterwithin{table}{section}
+
+  \usepackage{booktabs}
+  \usepackage{longtable}
+  \usepackage{array}
+  \usepackage{multirow}
+  \usepackage{wrapfig}
+  \usepackage{float}
+  \usepackage{colortbl}
+  \usepackage{pdflscape}
+  \usepackage{tabu}
+  \usepackage{threeparttable}
+  \usepackage{threeparttablex}
+  \usepackage[normalem]{ulem}
+  \usepackage{makecell}
+  \pagestyle{fancy}
+  ```
+output:
+  pdf_document:
+    number_sections: true
+    fig_crop: true
+    fig_caption: true
+    keep_tex: false
+---
+```{r,include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)
+```
+\thispagestyle{empty}
+\counterwithin{lstlisting}{section}
+\newpage
+\pagenumbering{roman}
+\thispagestyle{plain}
+\tableofcontents
+\newpage
+\thispagestyle{plain}
+\listoffigures
+\listoftables
+\lstlistoflistings
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+# Introduction
+
+## The Buddhist Parable of the Mustard Seed
+
+## Characteristics of Religious Ritual
+
+## Van Gennep's Rite of Passage
+
+## Different Definitions of Death
+
+## Issues With Comparative Study of Religion
+
+
+
+
+
+# Indigenous Religions
+
+## The Role of Affect in Religion
+
+## Basilov's Characteristics of Indigenous Religions
+
+## Souls and Spirits in Indigenous Religions
+
+## Wari' Funeral Practice
+
+## The Melpa Understanding of Souls
+
+
+
+
+
+# Death in the Ancient World
+
+## The Egyptian View of the Soul
+
+## Three Textual Primary Sources of Understanding the Egyptian Views on Death
+
+## Death in "The Epic of Gilgamesh"
+
+## Babylonian Funeral Practice
+
+## Zoroastrian Funerals
+
+## The Divisions of the Underworld in Greek Thought
+
+## Early Human Perspectives on Death
+
+## What Constitutes a Burial
+
+\appendix
+# Definitions
+
+```{r}
+data = read.csv(file='./csv/definitions.csv', check.names=FALSE, stringsAsFactors=FALSE,
+encoding='UTF-8')
+
+knitr::kable(
+  data, caption = '\\label{glossary}A glossary of important definitions.', longtable=TRUE, align=c("r","l")
+) %>%
+group_rows("Week 1: Introduction",1,10) %>%
+group_rows("Week 2: Indigenous Religions",11,16) %>%
+group_rows("Week 3: Death in the Ancient World",17,26) %>%
+kable_styling(latex_options = c('striped'), stripe_color="#e6f0ff") %>%
+column_spec(2,width='32em') %>%
+column_spec(1,width='10em') %>%
+row_spec(0,bold=TRUE)
+```
