@@ -306,6 +306,18 @@ library(kableExtra)
 - keep things
   - phenomenological (See \autoref{glossary})
   - epoch&eacute; (See \autoref{glossary})
+- focus on **comparison and contrast**
+  - how does a given religion handle death?
+
+### E.B. Tyler
+- "primitive cultures"
+  - somewhat pejorative
+  - implies inferiority
+
+### Essentialism
+- assumption that there is **one initial religion**
+  - all others would branch from it
+- **zero evidence for this**
 
 
 ```{r child='./readings/week1.rmd'}
