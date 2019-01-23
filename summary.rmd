@@ -332,14 +332,150 @@ library(kableExtra)
 # Indigenous Religions
 
 ## The Role of Affect in Religion
+- affect
+  - the way humans **respond to phenomena**
+- Rudolph Otto
+  - "The Idea of the Holy"
+  - assumes there is only one relationship between humans and spirit world
+    - there can be multiple
+    - duality of souls
+- early Japanese religion (Shinto)
+  - *kami*
+    - based on affect
+    - kami came into existence through stories
+    - stories told based on impact
+- local cults develop
+  - continued existence is based on
+    - perceived efficacy
+    - efficacy can be determined through stories
 
 ## Basilov's Characteristics of Indigenous Religions
+1. animism
+   - animation of surrounding world
+     - spirits inhabit objects
+     - sometimes it depends on how important the object is to a culture
+1. connections in nature
+   - all nature is connected
+1. no separation from the surrounding world
+   - spirit world is not discrete from physical world
+1. the cosmos is accessible
+   - spirit realms can be accessed
+     - shamans
+1. religion as a social consciousness
+     - meaning in the bonds we have with each other
 
 ## Souls and Spirits in Indigenous Religions
 
+### Multiplicity
+- ancient China
+  - two types of souls
+  - **hun** soul
+    - breath
+    - animates the body
+    - leaves on death
+  - **po** soul
+    - in the bones
+    - remains after death
+- Tibet
+  - souls in various body parts
+  - soul = internal protective deity
+    - protection from illness
+- Inuit
+  - souls in
+    - larynx
+    - left side of body
+    - souls in limbs (size of finger joints)
+  - animate the body
+  - a soul leaving the body can explain pain
+
+### Mobility
+- souls can leave the body
+  - ancient China
+  - Inuit
+- not always the case
+  - hun vs po
+  - hun can leave, po remains
+- souls can be
+  - lost
+  - earned
+
+### What Happens After Death
+- utopian vs locative destination
+- utopian
+  - a perfect place
+  - like heaven
+- locative
+  - remains in this world
+  - Gurung people of Nepal
+
+### Materiality
+- specific soul shapes
+  - Inuit
+    - size of sparrow
+    - shaped like little people
+- interventions
+  - ancient China
+    - dead honored at feast
+    - the deceased can become drunk!
+  - Inuit
+    - attacked by magic
+    - spirits can be used to attack people
+  - Soyot (Siberia)
+    - dip a soul in hot/cold water
+    - causes fever/shivers
+  - Hagen (Papua New Guinea)
+    - dead called to help with sickness
+    - if you forget to mention a spirit, it can get angry
+      - you will be the next to get sick
+
 ## Wari' Funeral Practice
 
+### Wari' Mortuary Cosmology
+- locative
+  - ancestral realm is below deep water
+- ancestors emerge as boars to be hunted
+  - the dead provide for the living
+
+### Death and Mourning
+- everyone screams
+  - from death to end of funeral
+- family
+  - keep the body company
+- friends
+  - all other ritual obligations
+  - prepare food
+  - build pyre
+  - ritual piling
+    - lay on top of deceased until those on bottom pass out
+    - in this way, they "join" the deceased
+  - dismember body and prepare to cook it
+  - eat the body
+
+### Role of Affect in Wari' Funeral Practice
+- detachment from the dead
+- eliminate "the negative experience of nostalgia"
+  - destroy all evidence a dead person's existence
+  - change social norms every time someone dies
+
 ## The Melpa Understanding of Souls
+- eldest brother won't sacrifice pig for dead parents
+  - dead father angry
+- sister spies on meeting of spirits
+  - dead father is angry
+  - suggests the eldest brother should be the one to die in battle
+  - dead mother is upset but the vote passes
+- sister tries to warn brothers
+  - brothers don't listen
+  - eldest dies
+
+### What to Take Away Here
+- spirits are vengeful
+- the sister was able to bring back sacrificial meat as proof
+  - materialism
+- sacrifices are important to
+  - keep the spirits happy
+  - they can exact revenge OR watch over you
+    - the choice is yours
 
 ```{r child='./readings/week2.rmd'}
 ```
