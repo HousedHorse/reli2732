@@ -226,7 +226,7 @@ library(kableExtra)
 
 ## Issues With Comparative Study of Religion
 
-```{r child='./readings/week1.Rmd'}
+```{r child='./readings/week1.rmd'}
 ```
 
 
@@ -245,7 +245,7 @@ library(kableExtra)
 
 ## The Melpa Understanding of Souls
 
-```{r child='./readings/week2.Rmd'}
+```{r child='./readings/week2.rmd'}
 ```
 
 
@@ -270,7 +270,7 @@ library(kableExtra)
 
 ## What Constitutes a Burial
 
-```{r child='./readings/week3.Rmd'}
+```{r child='./readings/week3.rmd'}
 ```
 
 \appendix
