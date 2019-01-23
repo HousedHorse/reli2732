@@ -226,6 +226,9 @@ library(kableExtra)
 
 ## Issues With Comparative Study of Religion
 
+```{r child='./readings/week1.Rmd'}
+```
+
 
 
 
@@ -241,6 +244,9 @@ library(kableExtra)
 ## Wari' Funeral Practice
 
 ## The Melpa Understanding of Souls
+
+```{r child='./readings/week2.Rmd'}
+```
 
 
 
@@ -263,6 +269,9 @@ library(kableExtra)
 ## Early Human Perspectives on Death
 
 ## What Constitutes a Burial
+
+```{r child='./readings/week3.Rmd'}
+```
 
 \appendix
 # Definitions
