@@ -319,7 +319,6 @@ library(kableExtra)
   - all others would branch from it
 - **zero evidence for this**
 
-
 ```{r child='./readings/week1.rmd'}
 ```
 
@@ -384,5 +383,21 @@ group_rows("Week 3: Death in the Ancient World",17,26) %>%
 kable_styling(latex_options = c('striped'), stripe_color="#e6f0ff") %>%
 column_spec(2,width='32em') %>%
 column_spec(1,width='11em') %>%
+row_spec(0,bold=TRUE)
+```
+
+\newpage
+
+# Important Dates
+
+```{r}
+data = read.csv(file='./csv/dates.csv', check.names=FALSE, stringsAsFactors=FALSE,
+encoding='UTF-8')
+
+knitr::kable(
+  data, caption = '\\label{dates}Important dates.', longtable=TRUE, align=c("r","r","l","l")
+) %>%
+kable_styling(latex_options = c('striped'), stripe_color="#e6f0ff") %>%
+column_spec(3,width='30em') %>%
 row_spec(0,bold=TRUE)
 ```
