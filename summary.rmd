@@ -10,7 +10,6 @@ csl: /home/housedhorse/.bibs/ieee.csl
 subparagraph: yes
 header-includes: |
   ```{=latex}
-  \UseRawInputEncoding
   \usepackage{float}
   \usepackage{listings}
   \usepackage[hang,bf]{caption}
@@ -231,12 +230,83 @@ library(kableExtra)
   - she finds enlightenment
 
 ## Characteristics of Religious Ritual
+- rituals
+  - invariant
+  - understanding of an act
+- religious rituals
+  - performed
+    - real audience
+      - sermon
+      - funeral
+      - wedding
+    - imagined audience
+      - prayer
+  - formalistic
+    - governed by rules
+  - traditionalistic
+    - appears to not change
+    - any change occurs very slowly
+- ritualization posits the existence of an **authoritative reality**
+  - dictates the immediate situation during a ritual
+
+### Effects of Ritual
+- forms/reinforces communities
+- connects
+  - actions
+  - authoritative reality
+- explanation of social realities
+  - reverence of elders in Chinese religion
+    - at a funeral, the youngest descendant pretends they are the deceased
+    - they are shown the same amount of respect as the deceased elder
+    - a preview of what's to come
+
+\newpage
 
 ## Van Gennep's Rite of Passage
+- always a **change in social status**
+- three stages
+  1. separation
+     - taken out of typical social circumstances
+  1. liminality
+     - between two states
+     - e.g., both a man and a boy at once
+     - limited individuality
+  1. reintegration
+     - back to normal
+     - often with a special sign of having completed ritual
+       - wedding bands
+       - etc.
 
 ## Different Definitions of Death
 
+### Traditional
+- cessation of breath
+
+### Veatch's Four Possibilities
+1. irreversible loss of **flow of vital fluids**
+1. irreversible loss of **soul**
+1. irreversible loss of **brain function** (See [Harvard Definition](#Harvard))
+1. irreversible loss of **capacity for social function** due to **loss of brain function**
+
+### Chinese
+- Iron Crutch Li
+  - visiting the gods
+- perhaps the dead are just visiting the gods?
+  - leave them out for a few days to make sure
+
+### Harvard {#Harvard}
+- irreversible loss of **brain function**
+  - even if life mechanically supported
+  - brain death
+- this is the contemporary definition
+
 ## Issues With Comparative Study of Religion
+- important to stay **objective**
+  - subjective opinions lead to loss of focus
+- keep things
+  - phenomenological (See \autoref{glossary})
+  - epoch&eacute; (See \autoref{glossary})
+
 
 ```{r child='./readings/week1.rmd'}
 ```
